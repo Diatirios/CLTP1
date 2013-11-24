@@ -17,7 +17,7 @@ int main()
 
     cout << p->eval(NULL)->getInteger() << endl;
 
-    /*GlobalContext::getInstance()->addNewLocalContest();
+    GlobalContext::getInstance()->addNewLocalContest();
     GlobalContext::getInstance()->addNewVariableInLastContext("n", Factory::createIntegerNumber(5));
 
     cout << GlobalContext::getInstance()->isContaining("n") << endl;
@@ -27,7 +27,9 @@ int main()
     cout << n->getInteger() << endl;
     cout << n->getReal() << endl;
     cout << n->toString() << endl;
-    cout << n->isReal() << endl;*/
+    cout << n->isReal() << endl;
+
+    GlobalContext::getInstance()->deleteLastLocalContext();
 
     //// fact
     Function *fact = Factory::createNewFunction("", "fact");
@@ -50,7 +52,7 @@ int main()
     ifthen->setRight(time);
     time->setLeft(v);
     Operation *sub = Factory::createSubstractOperation("n-1");
-    sub->setLeft(fact->getArg("n"));
+    sub->setLeft(Factory::createRecArgument("n"));
     sub->setRight(Factory::createIntegerNumber(1));
 
     list<Expression*> *rec = new list<Expression*>();
@@ -63,7 +65,7 @@ int main()
 
     list<Expression*> *ar = new list<Expression*>();
     ar->push_back(Factory::createIntegerNumber(3));
-    cout << fact->eval(ar)->getInteger() << endl;
+    cout << "Fact(3)=" << fact->eval(ar)->getInteger() << endl;
 
     return 0;
 }

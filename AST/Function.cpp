@@ -73,15 +73,11 @@ Number *Function::getArg(std::string name)
  */
 AbstractNumber *Function::eval(std::list<Expression*> *args)
 {
-    std::cout << "here" << std::endl;
-    std::cout.flush();
     GlobalContext::getInstance()->addNewLocalContest();
     std::list<std::string>::iterator iterName = m_argsNames->begin();
     std::list<Expression*>::iterator iterVal = args->begin();
     while (iterName != m_argsNames->end() && iterVal != args->end())
     {
-        std::cout << (*iterVal)->eval(args)->getInteger() << std::endl;
-        std::cout.flush();
         GlobalContext::getInstance()->addNewVariableInLastContext(*iterName, (Number*) (*iterVal)->eval(args));
         ++iterName, ++iterVal;
     }

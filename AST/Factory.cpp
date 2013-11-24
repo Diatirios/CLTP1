@@ -86,3 +86,8 @@ BinaryNumberCondition *Factory::createNewLessThanOrEqual(std::string body)
     return new LessThanOrEqual(body);
 }
 
+Argument *Factory::createRecArgument(std::string name)
+{
+    return new Argument(name);
+}
+
