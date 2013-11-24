@@ -1,0 +1,25 @@
+#ifndef IFTHENELSE_H
+#define IFTHENELSE_H
+
+#include <Function.h>
+#include <BooleanCondition.h>
+
+class IfThenElse : public Function
+{
+    public:
+        IfThenElse(std::string body);
+        virtual ~IfThenElse();
+        virtual Number* eval();
+        ::Expression *getLeft();
+        ::Expression *getRight();
+        BooleanCondition *getCondition();
+
+    protected:
+
+    private:
+        BooleanCondition *m_condition;
+        Expression *m_left;
+        Expression *m_right;
+};
+
+#endif // IFTHENELSE_H

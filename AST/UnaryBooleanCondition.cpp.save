@@ -1,0 +1,22 @@
+#include "UnaryBooleanCondition.h"
+
+UnaryBooleanCondition::UnaryBooleanCondition() : BooleanCondition()
+{
+    m_bcond = NULL;
+}
+
+UnaryBooleanCondition::~UnaryBooleanCondition()
+{
+    dele
+}
+
+void UnaryBooleanCondition::setBoooleanCondition(BooleanCondition *bcond)
+{
+    m_bcond = bcond;
+}
+
+BooleanCondition *UnaryBooleanCondition::getCond()
+{
+    return m_bcond;
+}
+

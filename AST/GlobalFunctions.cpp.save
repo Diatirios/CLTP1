@@ -1,0 +1,28 @@
+#include "GlobalFunctions.h"
+
+static GlobalFunctions *s_instanceGlobalFunctions = 0;
+
+
+GlobalFunctions::GlobalFunctions()
+{
+    m_listeFunctions = new std::map<std::string, Function>;
+}
+
+GlobalFunctions::~GlobalFunctions()
+{
+    delete m_listeFunctions;
+}
+
+GlobalFunctions* GlobalFunctions::getInstance()
+{
+    if (s_instanceGlobalFunctions == 0)
+        s_instanceGlobalFunctions = new GlobalFunctions;
+    return s_instanceGlobalFunctions;
+}
+
+bool GlobalFunctions::isContaining(std::string name)
+{
+    return true;
+}
+
+Function *

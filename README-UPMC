@@ -1,0 +1,5 @@
+Arithmetic expressions are in "Numbers" directory.
+A super class 'Expression' is defined. 
+Classes Number and Operation inherit from this super class.
+An Operation is composed of two Expressions.
+Some operations may throw exceptions such as Divide and Modulo.

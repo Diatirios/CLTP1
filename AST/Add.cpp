@@ -1,0 +1,42 @@
+#include "Add.h"
+
+/**
+ * @author David Lecoconnier
+ * @author Allan Mottier
+ * @date 2013-11-24
+ * @class Add
+ * @brief Add operation
+ */
+
+/**
+ * Constructor
+ * @param body text contained
+ */
+Add::Add(std::string body) : Operation(body)
+{
+    setSymbol('+');
+}
+
+/**
+ * Destructor
+ */
+Add::~Add()
+{
+    //dtor
+}
+
+/**
+ * Evaluate the Add operation
+ */
+AbstractNumber *Add::eval(std::list<Expression*> *args)
+{
+    AbstractNumber *n1 = NULL, *n2 = NULL;
+    n1 = getLeft()->eval(m_leftArgs);
+    n2 = getRight()->eval(m_rightArgs);
+
+    if (n1->isReal() || n2->isReal())
+        return Factory::createRealNumber(n1->getReal() + n2->getReal());
+    else
+        return Factory::createIntegerNumber(n1->getInteger() + n2->getInteger());
+}
+

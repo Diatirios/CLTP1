@@ -1,0 +1,21 @@
+#include "AND.h"
+
+/**
+ * @author David Lecoconnier
+ * @autho
+ */
+
+AND::AND(std::string body) : BinaryBooleanCondition(body)
+{
+}
+
+AND::~AND()
+{
+    //dtor
+}
+
+bool AND::eval()
+{
+    return getLeft()->eval() && getRight()->eval();
+}
+

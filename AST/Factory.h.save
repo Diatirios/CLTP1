@@ -1,0 +1,38 @@
+#ifndef FACTORY_H
+#define FACTORY_H
+
+#include <Add.h>
+#include <Divide.h>
+#include <Modulo.h>
+#include <Substract.h>
+#include <Time.h>
+#include <Number.h>
+#include <AND.h>
+#include <OR.h>
+#include <NOT.h>
+#include <Boolean.h>
+#include <LessThanOrEqual.h>
+#include <Variable.h>
+#include <Classes.h>
+
+class Factory
+{
+    public:
+        static Operation *createAddOperation(std::string body);
+        static Operation *createDivideOperation(std::string body);
+        static Operation *createModuloOperation(std::string body);
+        static Operation *createSubstractOperation(std::string body);
+        static Operation *createTimeOperation(std::string body);
+        static Number *createIntegerNumber(int val);
+        static Number *createRealNumber(float val);
+        static Number *createNumber(std::string val);
+        static Context *createNewLocalContext();
+        static BooleanCondition *createNewANDOperation(std::string body);
+        static BooleanCondition *createNewOROperation(std::string body);
+        static BooleanCondition *createNewNOTOperation(std::string body);
+        static BooleanCondition *createNewBoolean(bool val);
+        static BooleanCondition *createNewLessThanOrEqual(std::string body);
+        static Expression *createNewVariable(std::string body);
+};
+
+#endif // FACTORY_H
