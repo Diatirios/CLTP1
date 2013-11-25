@@ -845,7 +845,14 @@ makeArgs(const char * cmd, int * retArgc, const char *** retArgv)
 
 		if(dollarMode)
 		{
-			argument=getenv(argument+1);
+			if(*(argument+1)=='$'){
+				char* buff = (char*)malloc(5*sizeof(char));
+				sprintf(buff,"%d",getpid());
+				argument=buff;
+			}else{
+				argument=getenv(argument+1);
+			}			
+			
 		}
 
 		/*

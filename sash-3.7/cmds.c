@@ -43,7 +43,7 @@ do_echo(int argc, const char ** argv)
 
 
 void
-do_pwd(int argc, const char ** argv)
+do_pwd(int argc __attribute__((unused)), const char ** argv __attribute__((unused)))
 {
 	char	buf[PATH_LEN];
 
@@ -96,7 +96,7 @@ do_mkdir(int argc, const char ** argv)
 
 
 void
-do_mknod(int argc, const char ** argv)
+do_mknod(int argc __attribute__((unused)), const char ** argv)
 {
 	const char *	cp;
 	int		mode;
@@ -161,7 +161,7 @@ do_rmdir(int argc, const char ** argv)
 
 
 void
-do_sync(int argc, const char ** argv)
+do_sync(int argc __attribute__((unused)), const char ** argv __attribute__((unused)))
 {
 	sync();
 }
@@ -509,8 +509,8 @@ void
 do_mount(int argc, const char ** argv)
 {
 	const char *	str;
-	const char *	type;
-	int		flags;
+	const char *	type __attribute__((unused));
+	int		flags __attribute__((unused));
 
 	argc--;
 	argv++;
@@ -634,7 +634,7 @@ do_mount(int argc, const char ** argv)
 
 
 void
-do_umount(int argc, const char ** argv)
+do_umount(int argc __attribute__((unused)), const char ** argv __attribute__((unused)))
 {
 #if	HAVE_LINUX_MOUNT
 	if (umount(argv[1]) < 0)
@@ -667,7 +667,7 @@ do_umount(int argc, const char ** argv)
 
 
 void
-do_cmp(int argc, const char ** argv)
+do_cmp(int argc __attribute__((unused)), const char ** argv)
 {
 	int		fd1;
 	int		fd2;
@@ -991,7 +991,7 @@ do_sum(int argc, const char ** argv)
 
 
 void
-do_exit(int argc, const char ** argv)
+do_exit(int argc __attribute__((unused)), const char ** argv __attribute__((unused)))
 {
 	if (getpid() == 1)
 	{
@@ -1005,7 +1005,7 @@ do_exit(int argc, const char ** argv)
 
 
 void
-do_setenv(int argc, const char ** argv)
+do_setenv(int argc __attribute__((unused)), const char ** argv)
 {
 	const char *	name;
 	const char *	value;
@@ -1056,7 +1056,7 @@ do_printenv(int argc, const char ** argv)
 
 	while (*env)
 	{
-		if ((strlen(*env) > len) && (env[0][len] == '=') &&
+		if (((int)strlen(*env) > len) && (env[0][len] == '=') &&
 			(memcmp(argv[1], *env, len) == 0))
 		{
 			printf("%s\n", &env[0][len+1]);
@@ -1172,7 +1172,7 @@ do_kill(int argc, const char ** argv)
 
 
 void
-do_where(int argc, const char ** argv)
+do_where(int argc __attribute__((unused)), const char ** argv)
 {
 	const char *	program;
 	const char *	dirName;

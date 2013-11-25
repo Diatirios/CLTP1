@@ -661,14 +661,14 @@ canonicalize(Archive * arch, const struct ar_hdr * hdr)
 		const char *	p;
 		size_t		len;
 
-		if (n >= strlen(arch->nameTable))
+		if (n >= (int)strlen((char*)arch->nameTable))
 		{
 			fprintf(stderr, "Longname index too large\n");
 
 			return FALSE;
 		}
 
-		longname = arch->nameTable + n;
+		longname = (char*)arch->nameTable + n;
 
 		p = strchr(longname, '/');
 
@@ -958,7 +958,7 @@ writeFile(const Archive * arch, int outfd)
 	{
 		ssize_t cc;
 
-		cc = read(arch->fd, buf, MIN(n, sizeof(buf)));
+		cc = read(arch->fd, buf, MIN(n, (int)sizeof(buf)));
 
 		if (cc == -1)
 		{
@@ -975,7 +975,7 @@ writeFile(const Archive * arch, int outfd)
 			return FALSE;
 		}
 
-		if (fullWrite(outfd, buf, cc) < 0)
+		if (fullWrite(outfd, (char*)buf, cc) < 0)
 		{
 			fprintf(stderr, "Write error: %s\n", strerror(errno));
 

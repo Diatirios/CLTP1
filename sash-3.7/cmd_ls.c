@@ -392,10 +392,10 @@ listFile(
 		strcpy(cp, modeString(mode));
 		cp += strlen(cp);
 
-		sprintf(cp, "%3d ", statBuf->st_nlink);
+		sprintf(cp, "%3d ", (int)statBuf->st_nlink);
 		cp += strlen(cp);
 
-		if (!userIdKnown || (statBuf->st_uid != userId))
+		if (!userIdKnown || ((int)statBuf->st_uid != userId))
 		{
 			pwd = getpwuid(statBuf->st_uid);
 
@@ -411,7 +411,7 @@ listFile(
 		sprintf(cp, "%-8s ", userName);
 		cp += strlen(cp);
 
-		if (!groupIdKnown || (statBuf->st_gid != groupId))
+		if (!groupIdKnown || ((int)statBuf->st_gid != groupId))
 		{
 			grp = getgrgid(statBuf->st_gid);
 

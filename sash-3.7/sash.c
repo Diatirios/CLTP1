@@ -1093,7 +1093,7 @@ do_alias(int argc, const char ** argv)
  * using the names without the dash.
  */
 void
-do_aliasall(int argc, const char **argv)
+do_aliasall(int argc __attribute__((unused)), const char **argv __attribute__((unused)))
 {
 	const CommandEntry *	entry;
 	const char *		name;
@@ -1139,7 +1139,7 @@ findAlias(const char * name)
 
 
 void
-do_source(int argc, const char ** argv)
+do_source(int argc __attribute__((unused)), const char ** argv)
 {
 	readFile(argv[1]);
 }
@@ -1239,7 +1239,7 @@ showPrompt(void)
 
 
 static void
-catchInt(int val)
+catchInt(int val __attribute__((unused)))
 {
 	signal(SIGINT, catchInt);
 
@@ -1251,7 +1251,7 @@ catchInt(int val)
 
 
 static void
-catchQuit(int val)
+catchQuit(int val __attribute__((unused)))
 {
 	signal(SIGQUIT, catchQuit);
 

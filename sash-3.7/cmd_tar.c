@@ -358,7 +358,7 @@ readHeader(const TarHeader * hp, int fileCount, const char ** fileTable)
 	int		mode;
 	int		uid;
 	int		gid;
-	int		checkSum;
+	int		checkSum __attribute__((unused));
 	long		size;
 	time_t		mtime;
 	const char *	name;
