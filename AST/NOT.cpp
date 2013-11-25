@@ -25,7 +25,7 @@ NOT::~NOT()
 }
 
 /**
- * Evaluate the not operator
+ * Evaluate the not operator. It returns the opposite value
  * @return true if it is false
  */
 bool NOT::eval()

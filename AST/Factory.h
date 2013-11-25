@@ -16,7 +16,6 @@
 #include <Context.h>
 #include <Function.h>
 #include <IfThenElse.h>
-#include <Argument.h>
 
 class Factory
 {
@@ -38,7 +37,6 @@ class Factory
         static Variable *createNewVariable(std::string body);
         static Function *createNewFunction(std::string body, std::string name);
         static Expression *createNewIf(std::string body);
-        static Argument *createRecArgument(std::string name);
 };
 
 #endif // FACTORY_H

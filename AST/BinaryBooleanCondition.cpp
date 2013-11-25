@@ -29,6 +29,7 @@ BinaryBooleanCondition::~BinaryBooleanCondition()
 
 /**
  * Return left part of the condition
+ * @return left part
  */
 BooleanCondition *BinaryBooleanCondition::getLeft()
 {
@@ -37,6 +38,7 @@ BooleanCondition *BinaryBooleanCondition::getLeft()
 
 /**
  * Return right part of the condition
+ * @return right part
  */
 BooleanCondition *BinaryBooleanCondition::getRight()
 {

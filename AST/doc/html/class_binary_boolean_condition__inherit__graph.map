@@ -1,0 +1,5 @@
+<map id="BinaryBooleanCondition" name="BinaryBooleanCondition">
+<area shape="rect" id="node3" href="$class_a_n_d.html" title="And combination." alt="" coords="26,155,75,181"/>
+<area shape="rect" id="node4" href="$class_o_r.html" title="Or combination." alt="" coords="99,155,140,181"/>
+<area shape="rect" id="node2" href="$class_boolean_condition.html" title="Abstract boolean condition. It should be an expression but is is not to simplify calculus." alt="" coords="24,5,147,32"/>
+</map>

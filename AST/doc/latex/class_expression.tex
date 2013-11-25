@@ -1,0 +1,118 @@
+\hypertarget{class_expression}{\section{Expression Class Reference}
+\label{class_expression}\index{Expression@{Expression}}
+}
+
+
+Generalized representation of an expression.  
+
+
+
+
+Inheritance diagram for Expression\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_expression__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_expression_a42980da61e3dab5edd4ef12ab10d047b}{Expression} (std\-::string body)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_expression_a3e99570b177da619eeb2c5787cbb148e}{$\sim$\-Expression} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_expression_a5b20a3a102b7da3f53203b867859ba7c}{virtual \hyperlink{class_abstract_number}{Abstract\-Number} $\ast$ {\bfseries eval} (std\-::list$<$ \hyperlink{class_expression}{Expression} $\ast$ $>$ $\ast$args)=0}\label{class_expression_a5b20a3a102b7da3f53203b867859ba7c}
+
+\item 
+std\-::string \hyperlink{class_expression_a5c403d29fd47e5363ff70ee813a805f4}{get\-Body} ()
+\begin{DoxyCompactList}\small\item\em Return the body text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_expression_a4889a8b18a6e996b78b87ed61a5f3595}{set\-Body} (std\-::string body)
+\begin{DoxyCompactList}\small\item\em Modify the body text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generalized representation of an expression. 
+
+\begin{DoxyAuthor}{Author}
+David Lecoconnier 
+
+Allan Mottier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2013-\/11-\/24 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_expression_a42980da61e3dab5edd4ef12ab10d047b}{\index{Expression@{Expression}!Expression@{Expression}}
+\index{Expression@{Expression}!Expression@{Expression}}
+\subsubsection[{Expression}]{\setlength{\rightskip}{0pt plus 5cm}Expression\-::\-Expression (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{body}
+\end{DoxyParamCaption}
+)}}\label{class_expression_a42980da61e3dab5edd4ef12ab10d047b}
+
+
+Default constructor. 
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em body} & text contained \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_expression_a3e99570b177da619eeb2c5787cbb148e}{\index{Expression@{Expression}!$\sim$\-Expression@{$\sim$\-Expression}}
+\index{$\sim$\-Expression@{$\sim$\-Expression}!Expression@{Expression}}
+\subsubsection[{$\sim$\-Expression}]{\setlength{\rightskip}{0pt plus 5cm}Expression\-::$\sim$\-Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_expression_a3e99570b177da619eeb2c5787cbb148e}
+
+
+Default destructor. 
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_expression_a5c403d29fd47e5363ff70ee813a805f4}{\index{Expression@{Expression}!get\-Body@{get\-Body}}
+\index{get\-Body@{get\-Body}!Expression@{Expression}}
+\subsubsection[{get\-Body}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Expression\-::get\-Body (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_expression_a5c403d29fd47e5363ff70ee813a805f4}
+
+
+Return the body text. 
+
+\begin{DoxyReturn}{Returns}
+a string 
+\end{DoxyReturn}
+\hypertarget{class_expression_a4889a8b18a6e996b78b87ed61a5f3595}{\index{Expression@{Expression}!set\-Body@{set\-Body}}
+\index{set\-Body@{set\-Body}!Expression@{Expression}}
+\subsubsection[{set\-Body}]{\setlength{\rightskip}{0pt plus 5cm}void Expression\-::set\-Body (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{body}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_expression_a4889a8b18a6e996b78b87ed61a5f3595}
+
+
+Modify the body text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em body} & a text \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/Expression.\-h\item 
+src/Expression.\-cpp\end{DoxyCompactItemize}

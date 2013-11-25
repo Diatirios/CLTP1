@@ -5,5 +5,5 @@
  * @author Allan Mottier
  * @date 2013-11-24
  * @class AbstractNumber
- * @brief AbstractNumber
+ * @brief Abstraction of a Number
  */

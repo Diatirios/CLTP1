@@ -28,6 +28,7 @@ UnaryBooleanCondition::~UnaryBooleanCondition()
 
 /**
  * Modify the member
+ * @param bcond a boolean condition
  */
 void UnaryBooleanCondition::setBoooleanCondition(BooleanCondition *bcond)
 {

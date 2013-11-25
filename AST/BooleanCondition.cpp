@@ -26,7 +26,8 @@ BooleanCondition::~BooleanCondition()
 }
 
 /**
- * Modify text
+ * Modify body text
+ * @param body body text
  */
 void BooleanCondition::setBody(std::string body)
 {
@@ -34,7 +35,8 @@ void BooleanCondition::setBody(std::string body)
 }
 
 /**
- * Return text
+ * Return body text
+ * @return text
  */
 std::string BooleanCondition::getBody()
 {

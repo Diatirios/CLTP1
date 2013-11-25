@@ -5,8 +5,8 @@
  * @author David Lecoconnier
  * @author Allan Mottier
  * @date 2013-11-24
- * @class Add
- * @brief Add operation
+ * @class Expression
+ * @brief Generalized representation of an expression
  */
 
 /**
@@ -26,11 +26,19 @@ Expression::~Expression()
     //dtor
 }
 
+/**
+ * Return the body text
+ * @return a string
+ */
 std::string Expression::getBody()
 {
     return m_body;
 }
 
+/**
+ * Modify the body text
+ * @param body a text
+ */
 void Expression::setBody(std::string body)
 {
     m_body = body;

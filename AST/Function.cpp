@@ -59,6 +59,7 @@ void Function::setArgsNames(std::list<std::string> *args)
 
 /**
  * Return the value associated with an argument in the local context
+ * @param name the name of the wanted argument
  * @return a Number
  */
 Number *Function::getArg(std::string name)
@@ -89,13 +90,18 @@ AbstractNumber *Function::eval(std::list<Expression*> *args)
     return res;
 }
 
+/**
+ * Evaluate the function's body
+ * @return the evaluation's result
+ */
 AbstractNumber *Function::eval()
 {
     return getExpression()->eval(NULL);
 }
 
 /**
- * Return the expression
+ * Return the body expression
+ * @return the body
  */
 Expression *Function::getExpression()
 {
@@ -103,7 +109,7 @@ Expression *Function::getExpression()
 }
 
 /**
- * Modify the expression
+ * Modify the body expression
  * @param expr an Expression
  */
 void Function::setExpression(Expression* expr)

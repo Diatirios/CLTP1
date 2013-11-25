@@ -27,6 +27,8 @@ Divide::~Divide()
 
 /**
  * Evaluate the Divide operation
+ * @param args -Useless-
+ * @return the result
  */
 AbstractNumber* Divide::eval(std::list<Expression*> *args)
 {

@@ -1,5 +1,13 @@
 #include "Factory.h"
 
+/**
+ * @author David Lecoconnier
+ * @author Allan Mottier
+ * @date 2013-11-24
+ * @class Factory
+ * @brief Factory for creation of all part of the AST
+ */
+
 
 Operation *Factory::createAddOperation(std::string body)
 {
@@ -86,8 +94,4 @@ BinaryNumberCondition *Factory::createNewLessThanOrEqual(std::string body)
     return new LessThanOrEqual(body);
 }
 
-Argument *Factory::createRecArgument(std::string name)
-{
-    return new Argument(name);
-}
 

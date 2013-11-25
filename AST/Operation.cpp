@@ -30,6 +30,7 @@ Operation::~Operation()
 
 /**
  * Return left part
+ * @return left part
  */
 Expression *Operation::getLeft()
 {
@@ -38,6 +39,7 @@ Expression *Operation::getLeft()
 
 /**
  * Return right part
+ * @return right part
  */
 Expression *Operation::getRight()
 {
@@ -46,6 +48,8 @@ Expression *Operation::getRight()
 
 /**
  * Modify left part
+ * @param left an expression
+ * @param args a list of argument needed by the left eexpression
  */
 void Operation::setLeft(Expression *left, std::list<Expression*> *args)
 {
@@ -55,6 +59,8 @@ void Operation::setLeft(Expression *left, std::list<Expression*> *args)
 
 /**
  * Modify right part
+ * @param right an expression
+ * @param args a list of argument needed by the right eexpression
  */
 void Operation::setRight(Expression *right, std::list<Expression*> *args)
 {
@@ -62,11 +68,19 @@ void Operation::setRight(Expression *right, std::list<Expression*> *args)
     m_rightArgs = args;
 }
 
+/**
+ * Modify the symbol of this operation
+ * @param letter the operation symbol
+ */
 void Operation::setSymbol(char letter)
 {
     m_symbol = letter;
 }
 
+/**
+ * Return the symbol of the operation
+ * @return a symbol
+ */
 char Operation::getSymbol()
 {
     return m_symbol;

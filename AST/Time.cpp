@@ -27,6 +27,8 @@ Time::~Time()
 
 /**
  * Evaluate the Time operation
+ * @param args -Useless-
+ * @return the result
  */
 AbstractNumber* Time::eval(std::list<Expression*> *args)
 {

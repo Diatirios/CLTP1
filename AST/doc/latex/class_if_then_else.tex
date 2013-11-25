@@ -1,0 +1,203 @@
+\hypertarget{class_if_then_else}{\section{If\-Then\-Else Class Reference}
+\label{class_if_then_else}\index{If\-Then\-Else@{If\-Then\-Else}}
+}
+
+
+If expression.  
+
+
+
+
+Inheritance diagram for If\-Then\-Else\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_if_then_else__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for If\-Then\-Else\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{class_if_then_else__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_if_then_else_abf6f0e5ecce77a24b5cee1e31190818f}{If\-Then\-Else} (std\-::string body)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_if_then_else_a14d1c1cea52dd3b9939de1e6b54b86c6}{virtual \hyperlink{class_if_then_else_a14d1c1cea52dd3b9939de1e6b54b86c6}{$\sim$\-If\-Then\-Else} ()}\label{class_if_then_else_a14d1c1cea52dd3b9939de1e6b54b86c6}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_abstract_number}{Abstract\-Number} $\ast$ \hyperlink{class_if_then_else_af535b187cfbd3a2f7ea3704d23dbcfa8}{eval} (std\-::list$<$ \hyperlink{class_expression}{Expression} $\ast$ $>$ $\ast$args)
+\begin{DoxyCompactList}\small\item\em Evaluate the if. \end{DoxyCompactList}\item 
+\-::\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_if_then_else_a90885fff45494cab3c6c2461ebfa7277}{get\-Left} ()
+\begin{DoxyCompactList}\small\item\em Return the left expression. \end{DoxyCompactList}\item 
+\-::\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_if_then_else_ab2ffd8ec427ba4fa86284d21f1fe7f87}{get\-Right} ()
+\begin{DoxyCompactList}\small\item\em Return the right expression. \end{DoxyCompactList}\item 
+\hyperlink{class_boolean_condition}{Boolean\-Condition} $\ast$ \hyperlink{class_if_then_else_adfd61f38868f9e63d7ab3f61023ca39a}{get\-Condition} ()
+\begin{DoxyCompactList}\small\item\em Return the condition. \end{DoxyCompactList}\item 
+void \hyperlink{class_if_then_else_a0477e20916d36241b92ac64d799ea2c1}{set\-Left} (\-::\hyperlink{class_expression}{Expression} $\ast$left)
+\begin{DoxyCompactList}\small\item\em Modify the left expression. \end{DoxyCompactList}\item 
+void \hyperlink{class_if_then_else_a169fc4074f3ab0eee0c4ef107de8b6a2}{set\-Right} (\-::\hyperlink{class_expression}{Expression} $\ast$right)
+\begin{DoxyCompactList}\small\item\em Modify the right expression. \end{DoxyCompactList}\item 
+void \hyperlink{class_if_then_else_a9fdafff73584bfffebf3cc798f20b6cd}{set\-Bool\-Condition} (\hyperlink{class_boolean_condition}{Boolean\-Condition} $\ast$condition)
+\begin{DoxyCompactList}\small\item\em Modify the boolean condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+If expression. 
+
+\begin{DoxyAuthor}{Author}
+David Lecoconnier 
+
+Allan Mottier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2013-\/11-\/24 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_if_then_else_abf6f0e5ecce77a24b5cee1e31190818f}{\index{If\-Then\-Else@{If\-Then\-Else}!If\-Then\-Else@{If\-Then\-Else}}
+\index{If\-Then\-Else@{If\-Then\-Else}!IfThenElse@{If\-Then\-Else}}
+\subsubsection[{If\-Then\-Else}]{\setlength{\rightskip}{0pt plus 5cm}If\-Then\-Else\-::\-If\-Then\-Else (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{body}
+\end{DoxyParamCaption}
+)}}\label{class_if_then_else_abf6f0e5ecce77a24b5cee1e31190818f}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em body} & text contained \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_if_then_else_af535b187cfbd3a2f7ea3704d23dbcfa8}{\index{If\-Then\-Else@{If\-Then\-Else}!eval@{eval}}
+\index{eval@{eval}!IfThenElse@{If\-Then\-Else}}
+\subsubsection[{eval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Abstract\-Number} $\ast$ If\-Then\-Else\-::eval (
+\begin{DoxyParamCaption}
+\item[{std\-::list$<$ {\bf Expression} $\ast$ $>$ $\ast$}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_if_then_else_af535b187cfbd3a2f7ea3704d23dbcfa8}
+
+
+Evaluate the if. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & a list of arguments -\/ Useless here \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the evaluation 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression}{Expression}.
+
+\hypertarget{class_if_then_else_adfd61f38868f9e63d7ab3f61023ca39a}{\index{If\-Then\-Else@{If\-Then\-Else}!get\-Condition@{get\-Condition}}
+\index{get\-Condition@{get\-Condition}!IfThenElse@{If\-Then\-Else}}
+\subsubsection[{get\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Boolean\-Condition} $\ast$ If\-Then\-Else\-::get\-Condition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_if_then_else_adfd61f38868f9e63d7ab3f61023ca39a}
+
+
+Return the condition. 
+
+\begin{DoxyReturn}{Returns}
+a boolean condition 
+\end{DoxyReturn}
+\hypertarget{class_if_then_else_a90885fff45494cab3c6c2461ebfa7277}{\index{If\-Then\-Else@{If\-Then\-Else}!get\-Left@{get\-Left}}
+\index{get\-Left@{get\-Left}!IfThenElse@{If\-Then\-Else}}
+\subsubsection[{get\-Left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ If\-Then\-Else\-::get\-Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_if_then_else_a90885fff45494cab3c6c2461ebfa7277}
+
+
+Return the left expression. 
+
+\begin{DoxyReturn}{Returns}
+left part 
+\end{DoxyReturn}
+\hypertarget{class_if_then_else_ab2ffd8ec427ba4fa86284d21f1fe7f87}{\index{If\-Then\-Else@{If\-Then\-Else}!get\-Right@{get\-Right}}
+\index{get\-Right@{get\-Right}!IfThenElse@{If\-Then\-Else}}
+\subsubsection[{get\-Right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ If\-Then\-Else\-::get\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_if_then_else_ab2ffd8ec427ba4fa86284d21f1fe7f87}
+
+
+Return the right expression. 
+
+\begin{DoxyReturn}{Returns}
+right part 
+\end{DoxyReturn}
+\hypertarget{class_if_then_else_a9fdafff73584bfffebf3cc798f20b6cd}{\index{If\-Then\-Else@{If\-Then\-Else}!set\-Bool\-Condition@{set\-Bool\-Condition}}
+\index{set\-Bool\-Condition@{set\-Bool\-Condition}!IfThenElse@{If\-Then\-Else}}
+\subsubsection[{set\-Bool\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}void If\-Then\-Else\-::set\-Bool\-Condition (
+\begin{DoxyParamCaption}
+\item[{{\bf Boolean\-Condition} $\ast$}]{condition}
+\end{DoxyParamCaption}
+)}}\label{class_if_then_else_a9fdafff73584bfffebf3cc798f20b6cd}
+
+
+Modify the boolean condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & a boolean condition \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_if_then_else_a0477e20916d36241b92ac64d799ea2c1}{\index{If\-Then\-Else@{If\-Then\-Else}!set\-Left@{set\-Left}}
+\index{set\-Left@{set\-Left}!IfThenElse@{If\-Then\-Else}}
+\subsubsection[{set\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void If\-Then\-Else\-::set\-Left (
+\begin{DoxyParamCaption}
+\item[{\-::{\bf Expression} $\ast$}]{left}
+\end{DoxyParamCaption}
+)}}\label{class_if_then_else_a0477e20916d36241b92ac64d799ea2c1}
+
+
+Modify the left expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & left part \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_if_then_else_a169fc4074f3ab0eee0c4ef107de8b6a2}{\index{If\-Then\-Else@{If\-Then\-Else}!set\-Right@{set\-Right}}
+\index{set\-Right@{set\-Right}!IfThenElse@{If\-Then\-Else}}
+\subsubsection[{set\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void If\-Then\-Else\-::set\-Right (
+\begin{DoxyParamCaption}
+\item[{\-::{\bf Expression} $\ast$}]{right}
+\end{DoxyParamCaption}
+)}}\label{class_if_then_else_a169fc4074f3ab0eee0c4ef107de8b6a2}
+
+
+Modify the right expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & right part \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\-Functions/If\-Then\-Else.\-h\item 
+src/\-Functions/If\-Then\-Else.\-cpp\end{DoxyCompactItemize}

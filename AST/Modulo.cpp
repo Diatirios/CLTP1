@@ -27,6 +27,8 @@ Modulo::~Modulo()
 
 /**
  * Evaluate the Modulo operation
+ * @param args -Useless-
+ * @return the result
  */
 AbstractNumber* Modulo::eval(std::list<Expression*> *args)
 {

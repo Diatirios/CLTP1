@@ -27,6 +27,8 @@ Add::~Add()
 
 /**
  * Evaluate the Add operation
+ * @param args -Useless-
+ * @return the result
  */
 AbstractNumber *Add::eval(std::list<Expression*> *args)
 {

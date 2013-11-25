@@ -1,0 +1,191 @@
+\hypertarget{class_context}{\section{Context Class Reference}
+\label{class_context}\index{Context@{Context}}
+}
+
+
+A context is a mix between the stack and the heap in which variables are stored.  
+
+
+
+
+Inheritance diagram for Context\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{class_context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Context\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_context__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_context_a652cdcd2eedc8dbd9110bd284c5d5cf0}{\hyperlink{class_context_a652cdcd2eedc8dbd9110bd284c5d5cf0}{Context} ()}\label{class_context_a652cdcd2eedc8dbd9110bd284c5d5cf0}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_context_a2d34e4556448e40693f61d15e091b604}{\hyperlink{class_context_a2d34e4556448e40693f61d15e091b604}{$\sim$\-Context} ()}\label{class_context_a2d34e4556448e40693f61d15e091b604}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_context_a749420a035d008bb388fb2d737f973b0}{delete\-Last\-Local\-Context} ()
+\begin{DoxyCompactList}\small\item\em Remove the youngest context. \end{DoxyCompactList}\item 
+\hypertarget{class_context_a06fd882c9625b60a6130ab1e4537e38e}{void \hyperlink{class_context_a06fd882c9625b60a6130ab1e4537e38e}{add\-New\-Local\-Contest} ()}\label{class_context_a06fd882c9625b60a6130ab1e4537e38e}
+
+\begin{DoxyCompactList}\small\item\em Create a new context. \end{DoxyCompactList}\item 
+void \hyperlink{class_context_a0923de09c4e6e42ba5ab96ca961af86b}{add\-New\-Variable\-In\-Last\-Context} (std\-::string name, \hyperlink{class_number}{Number} $\ast$number)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_add}{Add} a new variable in the youngest context. \end{DoxyCompactList}\item 
+bool \hyperlink{class_context_a00cf96423533f26bf1457f181e47a885}{modify} (std\-::string name, \hyperlink{class_number}{Number} $\ast$number)
+\begin{DoxyCompactList}\small\item\em Modify the value of a variable in the youngest context. \end{DoxyCompactList}\item 
+bool \hyperlink{class_context_a4e5513c1557b91b9ba4897ca6239e664}{is\-Containing} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Test the presence of a variable in contexts. \end{DoxyCompactList}\item 
+\hyperlink{class_number}{Number} $\ast$ \hyperlink{class_context_a0924ac4b20a004cc5d87b0b360111832}{get\-Number} (std\-::string name)
+\begin{DoxyCompactList}\small\item\em Return the youngest \hyperlink{class_number}{Number} of a variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_context_a84b15fffee0ce1176cb995122f0573b9}{has\-Next\-Local\-Context} ()
+\begin{DoxyCompactList}\small\item\em Test if there is a next context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_context_aa3a6edbb214af148252961f74d3fa4f1}{\hyperlink{class_context}{Context} $\ast$ {\bfseries m\-\_\-local\-Context}}\label{class_context_aa3a6edbb214af148252961f74d3fa4f1}
+
+\item 
+\hypertarget{class_context_a80bc700bd57760f144c5ac9e2175a287}{std\-::map$<$ std\-::string, \hyperlink{class_number}{Number} $>$ $\ast$ {\bfseries m\-\_\-map}}\label{class_context_a80bc700bd57760f144c5ac9e2175a287}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A context is a mix between the stack and the heap in which variables are stored. 
+
+\begin{DoxyAuthor}{Author}
+David Lecoconnier 
+
+Allan Mottier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2013-\/11-\/24 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_context_a0923de09c4e6e42ba5ab96ca961af86b}{\index{Context@{Context}!add\-New\-Variable\-In\-Last\-Context@{add\-New\-Variable\-In\-Last\-Context}}
+\index{add\-New\-Variable\-In\-Last\-Context@{add\-New\-Variable\-In\-Last\-Context}!Context@{Context}}
+\subsubsection[{add\-New\-Variable\-In\-Last\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void Context\-::add\-New\-Variable\-In\-Last\-Context (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{{\bf Number} $\ast$}]{number}
+\end{DoxyParamCaption}
+)}}\label{class_context_a0923de09c4e6e42ba5ab96ca961af86b}
+
+
+\hyperlink{class_add}{Add} a new variable in the youngest context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & variable's name \\
+\hline
+{\em number} & variable's value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_context_a749420a035d008bb388fb2d737f973b0}{\index{Context@{Context}!delete\-Last\-Local\-Context@{delete\-Last\-Local\-Context}}
+\index{delete\-Last\-Local\-Context@{delete\-Last\-Local\-Context}!Context@{Context}}
+\subsubsection[{delete\-Last\-Local\-Context}]{\setlength{\rightskip}{0pt plus 5cm}bool Context\-::delete\-Last\-Local\-Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_context_a749420a035d008bb388fb2d737f973b0}
+
+
+Remove the youngest context. 
+
+\begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\hypertarget{class_context_a0924ac4b20a004cc5d87b0b360111832}{\index{Context@{Context}!get\-Number@{get\-Number}}
+\index{get\-Number@{get\-Number}!Context@{Context}}
+\subsubsection[{get\-Number}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Number} $\ast$ Context\-::get\-Number (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_context_a0924ac4b20a004cc5d87b0b360111832}
+
+
+Return the youngest \hyperlink{class_number}{Number} of a variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & variable's name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the variable's value 
+\end{DoxyReturn}
+\hypertarget{class_context_a84b15fffee0ce1176cb995122f0573b9}{\index{Context@{Context}!has\-Next\-Local\-Context@{has\-Next\-Local\-Context}}
+\index{has\-Next\-Local\-Context@{has\-Next\-Local\-Context}!Context@{Context}}
+\subsubsection[{has\-Next\-Local\-Context}]{\setlength{\rightskip}{0pt plus 5cm}bool Context\-::has\-Next\-Local\-Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_context_a84b15fffee0ce1176cb995122f0573b9}
+
+
+Test if there is a next context. 
+
+\begin{DoxyReturn}{Returns}
+true if present 
+\end{DoxyReturn}
+\hypertarget{class_context_a4e5513c1557b91b9ba4897ca6239e664}{\index{Context@{Context}!is\-Containing@{is\-Containing}}
+\index{is\-Containing@{is\-Containing}!Context@{Context}}
+\subsubsection[{is\-Containing}]{\setlength{\rightskip}{0pt plus 5cm}bool Context\-::is\-Containing (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_context_a4e5513c1557b91b9ba4897ca6239e664}
+
+
+Test the presence of a variable in contexts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & variable's name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if present 
+\end{DoxyReturn}
+\hypertarget{class_context_a00cf96423533f26bf1457f181e47a885}{\index{Context@{Context}!modify@{modify}}
+\index{modify@{modify}!Context@{Context}}
+\subsubsection[{modify}]{\setlength{\rightskip}{0pt plus 5cm}bool Context\-::modify (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{{\bf Number} $\ast$}]{number}
+\end{DoxyParamCaption}
+)}}\label{class_context_a00cf96423533f26bf1457f181e47a885}
+
+
+Modify the value of a variable in the youngest context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & variable's name \\
+\hline
+{\em number} & variable's value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\-Memory/Context.\-h\item 
+src/\-Memory/Context.\-cpp\end{DoxyCompactItemize}

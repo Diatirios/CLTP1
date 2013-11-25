@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_boolean_condition.html" title="Abstract boolean condition. It should be an expression but is is not to simplify calculus." alt="" coords="5,107,128,133"/>
+<area shape="rect" id="node2" href="$class_binary_boolean_condition.html" title="Represents a binary boolean condition. It contains two members." alt="" coords="176,56,336,83"/>
+<area shape="rect" id="node5" href="$class_binary_number_condition.html" title="Represents a boolean condition in whiwh each member is numeral." alt="" coords="177,107,335,133"/>
+<area shape="rect" id="node7" href="$class_unary_boolean_condition.html" title="Represents an unary boolean condition. It contains one member." alt="" coords="177,157,335,184"/>
+<area shape="rect" id="node3" href="$class_a_n_d.html" title="And combination." alt="" coords="422,5,471,32"/>
+<area shape="rect" id="node4" href="$class_o_r.html" title="Or combination." alt="" coords="426,56,467,83"/>
+<area shape="rect" id="node6" href="$class_less_than_or_equal.html" title="AST &#39;&lt;=&#39; boolean expression." alt="" coords="384,107,509,133"/>
+<area shape="rect" id="node8" href="$class_boolean.html" title="Represents a boolean object (Necesssary for construction of AST)" alt="" coords="412,157,481,184"/>
+<area shape="rect" id="node9" href="$class_n_o_t.html" title="NOT operator." alt="" coords="423,208,471,235"/>
+</map>

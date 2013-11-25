@@ -25,11 +25,19 @@ Variable::~Variable()
     //dtor
 }
 
+/**
+ * Return the name of of the variable
+ * @return a name
+ */
 std::string Variable::getName()
 {
     return m_name;
 }
 
+/**
+ * Modify the name of the variable
+ * @param name a name
+ */
 void Variable::setName(std::string name)
 {
     m_name = name;
@@ -37,6 +45,8 @@ void Variable::setName(std::string name)
 
 /**
  * Evaluate the variable, which means it returns the stored value
+ * @param args -Useless-
+ * @return the result
  */
 AbstractNumber *Variable::eval(std::list<Expression*> *args)
 {

@@ -1,0 +1,8 @@
+<map id="Operation" name="Operation">
+<area shape="rect" id="node3" href="$class_add.html" title="Add operation." alt="" coords="5,155,51,181"/>
+<area shape="rect" id="node4" href="$class_divide.html" title="Divide operation." alt="" coords="75,155,131,181"/>
+<area shape="rect" id="node5" href="$class_modulo.html" title="Modulo operation." alt="" coords="155,155,219,181"/>
+<area shape="rect" id="node6" href="$class_substract.html" title="Substract operation." alt="" coords="243,155,321,181"/>
+<area shape="rect" id="node7" href="$class_time.html" title="Time operation." alt="" coords="347,155,397,181"/>
+<area shape="rect" id="node2" href="$class_expression.html" title="Generalized representation of an expression." alt="" coords="143,5,229,32"/>
+</map>

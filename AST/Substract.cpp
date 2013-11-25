@@ -27,6 +27,8 @@ Substract::~Substract()
 
 /**
  * Evaluate the Substract operation
+ * @param args -Useless-
+ * @return the result
  */
 AbstractNumber* Substract::eval(std::list<Expression*> *args)
 {

@@ -5,7 +5,7 @@
  * @author Allan Mottier
  * @date 2013-11-24
  * @class GlobalContext
- * @brief
+ * @brief Context which is always available. This context manages all locals contexts
  */
 
 static GlobalContext *s_globalContextInstance = NULL;
@@ -19,6 +19,9 @@ GlobalContext::~GlobalContext()
     //dtor
 }
 
+/**
+ * Singleton
+ */
 GlobalContext *GlobalContext::getInstance()
 {
     if (s_globalContextInstance == NULL)

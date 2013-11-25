@@ -38,6 +38,8 @@ GlobalFunctions* GlobalFunctions::getInstance()
 
 /**
  * Test the presence of a function
+ * @param name the name of a function
+ * @return true if present
  */
 bool GlobalFunctions::isContaining(std::string name)
 {
@@ -51,6 +53,8 @@ bool GlobalFunctions::isContaining(std::string name)
 
 /**
  * Return an evaluated function
+ * @param name name of the function
+ * @return the function name
  */
 Function *GlobalFunctions::getFuntion(std::string name)
 {
@@ -63,10 +67,14 @@ Function *GlobalFunctions::getFuntion(std::string name)
 }
 
 /**
- * Add a new function in the pool
+ * Add a new function in the pool. If the function is already in the pool, the new definition replaces the old one.
+ * @param name name of the function
+ * @param funct the function to add
  */
 void GlobalFunctions::addFunction(std::string name, Function *funct)
 {
+    if (isContaining(name))
+        m_listeFunctions->erase(name);
     m_listeFunctions->insert(std::pair<std::string, Function>(name, *funct));
 }
 

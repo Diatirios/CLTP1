@@ -1,0 +1,10 @@
+<map id="BooleanCondition" name="BooleanCondition">
+<area shape="rect" id="node2" href="$class_binary_boolean_condition.html" title="Represents a binary boolean condition. It contains two members." alt="" coords="5,80,165,107"/>
+<area shape="rect" id="node5" href="$class_binary_number_condition.html" title="Represents a boolean condition in whiwh each member is numeral." alt="" coords="190,80,348,107"/>
+<area shape="rect" id="node7" href="$class_unary_boolean_condition.html" title="Represents an unary boolean condition. It contains one member." alt="" coords="373,80,531,107"/>
+<area shape="rect" id="node3" href="$class_a_n_d.html" title="And combination." alt="" coords="26,155,75,181"/>
+<area shape="rect" id="node4" href="$class_o_r.html" title="Or combination." alt="" coords="99,155,140,181"/>
+<area shape="rect" id="node6" href="$class_less_than_or_equal.html" title="AST &#39;&lt;=&#39; boolean expression." alt="" coords="207,155,332,181"/>
+<area shape="rect" id="node8" href="$class_boolean.html" title="Represents a boolean object (Necesssary for construction of AST)" alt="" coords="387,155,456,181"/>
+<area shape="rect" id="node9" href="$class_n_o_t.html" title="NOT operator." alt="" coords="480,155,528,181"/>
+</map>

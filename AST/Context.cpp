@@ -28,6 +28,7 @@ Context::~Context()
 
 /**
  * Remove the youngest context
+ * @return true on success
  */
 bool Context::deleteLastLocalContext()
 {
@@ -58,6 +59,7 @@ void Context::addNewLocalContest()
 
 /**
  * Test if there is a next context
+ * @return true if present
  */
 bool Context::hasNextLocalContext()
 {
@@ -66,6 +68,8 @@ bool Context::hasNextLocalContext()
 
 /**
  * Add a new variable in the youngest context
+ * @param name variable's name
+ * @param number variable's value
  */
 void Context::addNewVariableInLastContext(std::string name, Number* number)
 {
@@ -77,6 +81,8 @@ void Context::addNewVariableInLastContext(std::string name, Number* number)
 
 /**
  * Test the presence of a variable in contexts
+ * @param name variable's name
+ * @return true if present
  */
 bool Context::isContaining(std::string name)
 {
@@ -90,6 +96,8 @@ bool Context::isContaining(std::string name)
 
 /**
  * Return the youngest Number of a variable
+ * @param name variable's name
+ * @return the variable's value
  */
 Number *Context::getNumber(std::string name)
 {
@@ -109,6 +117,9 @@ Number *Context::getNumber(std::string name)
 
 /**
  * Modify the value of a variable in the youngest context
+ * @param name variable's name
+ * @param number variable's value
+ * @return true on success
  */
 bool Context::modify(std::string name, Number* number)
 {

@@ -31,6 +31,7 @@ IfThenElse::~IfThenElse()
 
 /**
  * Return the left expression
+ * @return left part
  */
 Expression *IfThenElse::getLeft()
 {
@@ -39,6 +40,7 @@ Expression *IfThenElse::getLeft()
 
 /**
  * Return the right expression
+ * @return right part
  */
 Expression *IfThenElse::getRight()
 {
@@ -47,6 +49,7 @@ Expression *IfThenElse::getRight()
 
 /**
  * Return the condition
+ * @return a boolean condition
  */
 BooleanCondition *IfThenElse::getCondition()
 {
@@ -54,7 +57,8 @@ BooleanCondition *IfThenElse::getCondition()
 }
 
 /**
- * Return the left expression
+ * Modify the left expression
+ * @param left left part
  */
 void IfThenElse::setLeft(::Expression *left)
 {
@@ -62,7 +66,8 @@ void IfThenElse::setLeft(::Expression *left)
 }
 
 /**
- * Return the right expression
+ * Modify the right expression
+ * @param right right part
  */
 void IfThenElse::setRight(::Expression *right)
 {
@@ -70,7 +75,8 @@ void IfThenElse::setRight(::Expression *right)
 }
 
 /**
- * Return the boolean condition
+ * Modify the boolean condition
+ * @param condition a boolean condition
  */
 void IfThenElse::setBoolCondition(BooleanCondition *condition)
 {
@@ -79,6 +85,8 @@ void IfThenElse::setBoolCondition(BooleanCondition *condition)
 
 /**
  * Evaluate the if
+ * @param args a list of arguments - Useless here
+ * @return the result of the evaluation
  */
 AbstractNumber *IfThenElse::eval(std::list<Expression*> *args)
 {

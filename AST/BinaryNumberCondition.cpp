@@ -23,11 +23,13 @@ BinaryNumberCondition::BinaryNumberCondition(std::string body) : BooleanConditio
  */
 BinaryNumberCondition::~BinaryNumberCondition()
 {
-    //dtor
+    delete m_left;
+    delete m_right;
 }
 
 /**
  * Return left part of the condition
+ * @return left part
  */
 Expression* BinaryNumberCondition::getLeft()
 {
@@ -36,6 +38,7 @@ Expression* BinaryNumberCondition::getLeft()
 
 /**
  * Return right part of the condition
+ * @return right part
  */
 Expression* BinaryNumberCondition::getRight()
 {

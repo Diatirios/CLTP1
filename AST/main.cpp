@@ -39,7 +39,7 @@ int main()
     IfThenElse *ifthen = (IfThenElse*)Factory::createNewIf("if...");
     fact->setExpression(ifthen);
     BinaryNumberCondition *bc = Factory::createNewLessThanOrEqual("n<=0");
-    Variable *v = Factory::createNewVariable("v");
+    Variable *v = Factory::createNewVariable("n");
     v->setName("n");
     bc->setLeft(v);
     bc->setRight(Factory::createIntegerNumber(0));
@@ -52,7 +52,7 @@ int main()
     ifthen->setRight(time);
     time->setLeft(v);
     Operation *sub = Factory::createSubstractOperation("n-1");
-    sub->setLeft(Factory::createRecArgument("n"));
+    sub->setLeft(v);
     sub->setRight(Factory::createIntegerNumber(1));
 
     list<Expression*> *rec = new list<Expression*>();

@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_context.html" title="A context is a mix between the stack and the heap in which variables are stored." alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node2" href="$class_global_context.html" title="Context which is always available. This context manages all locals contexts." alt="" coords="120,5,224,32"/>
+</map>
