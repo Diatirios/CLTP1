@@ -3,10 +3,11 @@
  * Permission is granted to use, distribute, or modify this source,
  * provided that this copyright notice remains intact.
  *
- * Utility routines.
+ * Utility routines. 
  */
 
 #include "sash.h"
+#include "eval-upmc.h"
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -740,10 +741,7 @@ makeArgs(const char * cmd, int * retArgc, const char *** retArgv)
 			/*
 			 * If we see a backslash then accept the next
 			 * character no matter what it is.
-			 */		if(dollarMode)
-		{
-			
-		}
+			 */
 			if (ch == '\\')
 			{
 				ch = *cp++;
@@ -776,7 +774,7 @@ makeArgs(const char * cmd, int * retArgc, const char *** retArgv)
 			 * remember whether it was seen inside or outside
 			 * of quotes.
 			 */
-			if (isWildCard(ch))
+			if (isWildCard(ch) && !dollarMode)
 			{
 				if (quote)
 					quotedWildCards = TRUE;
@@ -849,6 +847,10 @@ makeArgs(const char * cmd, int * retArgc, const char *** retArgv)
 				char* buff = (char*)malloc(5*sizeof(char));
 				sprintf(buff,"%d",getpid());
 				argument=buff;
+			}else if(*(argument+1)=='['){
+				char* buff = (char*)malloc((strlen(argument)-3)*sizeof(char));
+				strncpy(buff,argument+2,strlen(argument)-3);
+				printf("test %s\n",infixToPrefix(buff));
 			}else{
 				argument=getenv(argument+1);
 			}			

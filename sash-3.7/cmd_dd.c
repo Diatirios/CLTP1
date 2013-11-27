@@ -3,7 +3,7 @@
  * Permission is granted to use, distribute, or modify this source,
  * provided that this copyright notice remains intact.
  *
- * The "dd" built-in command.
+ * The "dd" built-in command. 
  */
 
 #include "sash.h"

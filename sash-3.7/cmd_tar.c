@@ -4,7 +4,7 @@
  * provided that this copyright notice remains intact.
  *
  * The "tar" built-in command.
- * This allows creation, extraction, and listing of tar files.
+ * This allows creation, extraction, and listing of tar files. 
  */
 
 #include "sash.h"

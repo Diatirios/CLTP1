@@ -5,7 +5,7 @@
 # The HAVE_LINUX_ATTR definition adds the -chattr and -lsattr commands.
 # The HAVE_LINUX_MOUNT definition makes -mount and -umount work on Linux.
 # The HAVE_BSD_MOUNT definition makes -mount and -umount work on BSD.
-# The MOUNT_TYPE definition sets the default file system type for -mount.
+# The MOUNT_TYPE definition sets the default file system type for -mount .
 #
 HAVE_GZIP		= 0
 HAVE_LINUX_ATTR		= 0

@@ -10,7 +10,7 @@
  * provided that this copyright notice remains intact.
  *
  * The "ar" built-in command.
- * This allows extraction and listing of ar files.
+ * This allows extraction and listing of ar files. 
  */
 
 #include <ar.h>

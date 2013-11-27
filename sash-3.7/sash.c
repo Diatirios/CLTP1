@@ -4,7 +4,7 @@
  * provided that this copyright notice remains intact.
  *
  * Stand-alone shell for system maintainance for Linux.
- * This program should NOT be built using shared libraries.
+ * This program should NOT be built using shared libraries. 
  */
 
 #include <sys/types.h>
