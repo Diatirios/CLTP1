@@ -4,8 +4,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <Expression.h>
-#include <AbstractNumber.h>
+#include "Expression.h"
+#include "AbstractNumber.h"
 
 class Number : public Expression, public AbstractNumber
 {

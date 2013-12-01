@@ -1,7 +1,7 @@
 #ifndef LESSTHANOREQUAL_H
 #define LESSTHANOREQUAL_H
 
-#include <BinaryNumberCondition.h>
+#include "BinaryNumberCondition.h"
 
 
 class LessThanOrEqual : public BinaryNumberCondition

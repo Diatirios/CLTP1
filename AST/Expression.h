@@ -2,7 +2,7 @@
 #define EXPRESSION_H
 
 #include <string>
-#include <AbstractNumber.h>
+#include "AbstractNumber.h"
 #include <list>
 
 class Expression

@@ -1,5 +1,5 @@
 #include "Function.h"
-#include <GlobalFunctions.h>
+#include "GlobalFunctions.h"
 
 /**
  * @author David Lecoconnier

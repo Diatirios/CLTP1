@@ -1,8 +1,8 @@
 #ifndef BINARYNUMBERCONDITION_H
 #define BINARYNUMBERCONDITION_H
 
-#include <BooleanCondition.h>
-#include <Expression.h>
+#include "BooleanCondition.h"
+#include "Expression.h"
 
 class BinaryNumberCondition : public BooleanCondition
 {

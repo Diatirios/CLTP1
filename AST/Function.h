@@ -2,9 +2,9 @@
 #define FUNCTION_H
 
 #include <list>
-#include <Expression.h>
-#include <Classes.h>
-#include <GlobalContext.h>
+#include "Expression.h"
+#include "Classes.h"
+#include "GlobalContext.h"
 
 class Function : public Expression
 {

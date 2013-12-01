@@ -1,7 +1,7 @@
 #ifndef AND_H
 #define AND_H
 
-#include <BinaryBooleanCondition.h>
+#include "BinaryBooleanCondition.h"
 #include <string>
 
 class AND : public BinaryBooleanCondition

@@ -1,9 +1,9 @@
 #ifndef DIVIDE_H
 #define DIVIDE_H
 
-#include <Operation.h>
-#include <Number.h>
-#include <Factory.h>
+#include "Operation.h"
+#include "Number.h"
+#include "Factory.h"
 #include <exception>
 
 class Divide : public Operation

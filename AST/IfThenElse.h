@@ -1,8 +1,8 @@
 #ifndef IFTHENELSE_H
 #define IFTHENELSE_H
 
-#include <Expression.h>
-#include <BooleanCondition.h>
+#include "Expression.h"
+#include "BooleanCondition.h"
 
 class IfThenElse : public Expression
 {

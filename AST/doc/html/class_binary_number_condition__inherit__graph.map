@@ -1,4 +1,0 @@
-<map id="BinaryNumberCondition" name="BinaryNumberCondition">
-<area shape="rect" id="node3" href="$class_less_than_or_equal.html" title="AST &#39;&lt;=&#39; boolean expression." alt="" coords="21,155,147,181"/>
-<area shape="rect" id="node2" href="$class_boolean_condition.html" title="Abstract boolean condition. It should be an expression but is is not to simplify calculus." alt="" coords="23,5,145,32"/>
-</map>

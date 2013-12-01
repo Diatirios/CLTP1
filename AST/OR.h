@@ -1,7 +1,7 @@
 #ifndef OR_H
 #define OR_H
 
-#include <BinaryBooleanCondition.h>
+#include "BinaryBooleanCondition.h"
 
 class OR : public BinaryBooleanCondition
 {

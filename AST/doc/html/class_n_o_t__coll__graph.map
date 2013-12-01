@@ -1,4 +1,0 @@
-<map id="NOT" name="NOT">
-<area shape="rect" id="node2" href="$class_unary_boolean_condition.html" title="Represents an unary boolean condition. It contains one member." alt="" coords="5,80,163,107"/>
-<area shape="rect" id="node3" href="$class_boolean_condition.html" title="Abstract boolean condition. It should be an expression but is is not to simplify calculus." alt="" coords="23,5,145,32"/>
-</map>

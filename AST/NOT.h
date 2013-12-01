@@ -1,7 +1,7 @@
 #ifndef NOT_H
 #define NOT_H
 
-#include <UnaryBooleanCondition.h>
+#include "UnaryBooleanCondition.h"
 
 
 class NOT : public UnaryBooleanCondition

@@ -1,7 +1,7 @@
 #ifndef UNARYBOOLEANCONDITION_H
 #define UNARYBOOLEANCONDITION_H
 
-#include <BooleanCondition.h>
+#include "BooleanCondition.h"
 
 class UnaryBooleanCondition : public BooleanCondition
 {

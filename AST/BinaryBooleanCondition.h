@@ -1,7 +1,7 @@
 #ifndef BINARYBOOLEANCONDITION_H
 #define BINARYBOOLEANCONDITION_H
 
-#include <BooleanCondition.h>
+#include "BooleanCondition.h"
 
 
 class BinaryBooleanCondition : public BooleanCondition
