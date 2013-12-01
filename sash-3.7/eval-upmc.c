@@ -4,7 +4,8 @@
 #include <ctype.h>
 #include "eval-upmc.h"
 #include "../AST/Factory.h"
-#include "Function.h"
+#include "../AST/Function.h"
+#include "../AST/IfThenElse.h"
 
 char s[SIZE];
 int top=-1;       /* Global declarations */
@@ -84,45 +85,19 @@ char* infixToPrefix(char* infx)
     return strrev(prfx);
 }
 
-void functionRecognition(char* str)
-{
-    int isIfThenElse = 0;
-    char* finArg = strchr(str, ')');
-    char* arg = strchr(str, '(');
-    int taille = arg-str;
-
-    char* dest = calloc(taille + 1);
-    strncat(dest, str, taille);
-    dest[taille] = '\0';
-
-    Function *f = Factory::createNewFunction(str, dest);
-    free(dest);
-
-    taille = finArg-arg;
-    dest = calloc(taille + 1);
-    strncat(dest, arg, taille);
-    dest[taille] = '\0';
-
-    std::list<std::string> *l = new std::list<std::string>();
-    l->push_back(Factory::createNewVariable(dest));
-    f->setArgsNames(l);
-
-    f->setExpression(functionRecognitionRec(str, f));
-}
-
 Expression *functionRecognitionRec(char *str, Expression *parent)
 {
     while (str[0] == ' ')// On retire les premiers blancs
         str++;
 
-    token = strtok(str, " ");
+    char* token = strtok(str, " ");
     if (strcmp(token, "if") == 0)
     {
         token = strtok(NULL, " ");
         IfThenElse *ifExpr = (IfThenElse*)Factory::createNewIf("");
 
         str = strpbrk(str, "if");
-        ifExpr->setBoolCondition(functionRecognitionRec(str, ifExpr));
+        //ifExpr->setBoolCondition(functionRecognitionRec(str, ifExpr));
         str = strpbrk(str, "then");
         ifExpr->setLeft(functionRecognitionRec(str, ifExpr));
         str = strpbrk(str, "else");
@@ -138,5 +113,31 @@ Expression *functionRecognitionRec(char *str, Expression *parent)
     {
         // use arithmetic recognation to constrcut AST
     }
+}
+
+void functionRecognition(char* str)
+{
+    int isIfThenElse = 0;
+    char* finArg = strchr(str, ')');
+    char* arg = strchr(str, '(');
+    int taille = arg-str;
+
+    char* dest = (char*) calloc(taille + 1, sizeof(char));
+    strncat(dest, str, taille);
+    dest[taille] = '\0';
+
+    Function *f = Factory::createNewFunction(str, dest);
+    free(dest);
+
+    taille = finArg-arg;
+    dest = (char*) calloc(taille + 1, sizeof(char));
+    strncat(dest, arg, taille);
+    dest[taille] = '\0';
+
+    //std::list<std::string> *l = new std::list<std::string>();
+    //l->push_back(Factory::createNewVariable(dest));
+    //f->setArgsNames(l);
+
+    f->setExpression(functionRecognitionRec(str, f));
 }
 

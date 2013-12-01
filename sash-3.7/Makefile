@@ -21,7 +21,8 @@ CFLAGS = -g -Wall -Wextra -Wmissing-prototypes \
 	-DHAVE_BSD_MOUNT=$(HAVE_BSD_MOUNT) \
 	-DMOUNT_TYPE=$(MOUNT_TYPE)
 
-LIBS = # -lz
+LIBS =  # -lz
+	 
 
 
 BINDIR = /bin
@@ -29,14 +30,16 @@ MANDIR = /usr/man/man1
 
 
 OBJS = sash.o cmds.o cmd_dd.o cmd_ed.o cmd_grep.o cmd_ls.o cmd_tar.o \
-	cmd_gzip.o cmd_find.o cmd_file.o cmd_chattr.o cmd_ar.o utils.o eval-upmc.o
-
-
-sash:	$(OBJS)
-	$(CC) -o sash $(OBJS) $(LIBS)
-
+	cmd_gzip.o cmd_find.o cmd_file.o cmd_chattr.o cmd_ar.o utils.o
+	
+sash:	
+	cd ../AST; make; cp AST.a ../sash-3.7
+	$(CXX) -c eval-upmc.c -o eval-upmc.o AST.a 
+	$(OBJS)
+	$(CXX) -o sash $(OBJS) eval-upmc.o $(LIBS)
+	
 clean:
-	rm -f $(OBJS) sash
+	rm -f $(OBJS) sash;
 
 install: sash
 	cp sash $(BINDIR)/sash
